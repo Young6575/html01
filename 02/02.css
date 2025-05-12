@@ -1,0 +1,117 @@
+ /* id와 class 지정 예시 */
+ /* <h2 id="html" class="g1"> */
+ /* 모두 적용 전체 선택자 : * */
+
+ * {
+     padding: 0px;
+     margin: 0px;
+ }
+
+
+ header {
+     background-color: green;
+     color: white;
+ }
+
+ /* 그룹으로 지정 */
+ .g1 {
+     /* 배경색과 글자색 */
+     background-color: blue;
+     color: white;
+
+     /* 가로 & 세로 */
+     width: 50%;
+     height: 80px;
+
+     /* 안쪽 여백 */
+     padding: 20px;
+
+     /* 바깥쪽 여백 */
+     margin: 20px;
+
+     /* 패딩과 테투리를 포함 */
+     box-sizing: border-box;
+
+     /* flex 박스로 변경 */
+     display: flex;
+     justify-content: center;
+     align-items: center;
+ }
+
+ .g2 {
+     background-color: red;
+     color: white;
+ }
+
+ /* id에서 지정 */
+ #html {
+     background-color: blueviolet;
+     color: white;
+ }
+
+ /* 조상 자손 선택자*/
+ header>nav>ul
+
+ /* = header ul */
+     {
+     background-color: green;
+     color: white;
+ }
+
+ /* 부모 자식 선택자 */
+ footer>ul {
+     background-color: black;
+     color: white;
+ }
+
+ /* 태그 & 클래스 선택자 */
+ h2[class] {
+     color: yellow;
+ }
+
+ /* 다중 id 선택장 */
+ #s1,
+ #s2 {
+     background-color: aqua;
+
+ }
+
+ strong {
+     /* inline 속성이지만 block의 요소를 갖고 싶을 때(width & height) */
+     display: inline-block;
+
+     background-color: brown;
+     color: white;
+
+     width: 60%;
+     height: 30px;
+
+ }
+
+/* 웹상의 폰트 사용하기 */
+ article>p {
+     font-family: "Nanum Pen Script", cursive;
+     font-weight: 400;
+     font-style: normal;
+     font-size: 20px;
+     font-weight: bold;
+ }
+/* flex박스 설정 (양옆으로 배치*/
+ .fbox {
+display: flex;
+flex-direction: row;
+ }
+
+ .fbox > div {
+    margin-right: 20px;
+ }
+
+ img {
+    border-radius: 25%;
+ }
+
+ul {
+      list-style: none;
+      display: flex;
+}
+
