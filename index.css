@@ -21,7 +21,9 @@ h1 {
     padding: 10px;
 }
 
-
+main {
+    height: 70vh;
+}
 
 main a {
     text-decoration: none;
