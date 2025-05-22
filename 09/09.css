@@ -1,0 +1,52 @@
+h2 {
+    border: 2px black solid;
+    padding: 20px;
+}
+
+.idiv {
+    display: flex;
+    width: 50%;
+    align-items: center;
+}
+
+form {
+    width: 80%;
+    height: 40px;
+    padding: 10px;
+    border: 2px black solid;
+    padding-left: 25px;
+    display: flex;
+    align-items: center;
+}
+
+#btarea {
+  display: none;
+}
+
+
+#bt1 {
+  width: 100%;
+  height: 50px;
+
+
+  display: flex;
+  justify-content: center;  /* 수평 중앙 정렬 */
+  align-items: center;      /* 수직 중앙 정렬 */
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+#bt1 input {
+  width: 150px; /* 너무 커지지 않도록 제한 */
+  height: 30px;
+}
+
+#bt1 > button {
+  width: 50px; /* 너무 커지지 않도록 제한 */
+  height: 35px;
+}
+
+
+
+
+

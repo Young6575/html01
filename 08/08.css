@@ -22,35 +22,21 @@ form {
 }
 
 .mdiv > input, .mdiv > select {
-height: 40px;
-
+    height: 40px;
 }
 
 [readonly] {
   background-color: beige;
 }
 
-
-
-/* form  {
-    display: flex;
-    flex-wrap: wrap;
-    width: 80%;
-    height: 50%;
-    background-color: aqua;
+#txt1 {
+    background-color: rgb(37, 182, 37);
 }
 
-.mdiv1, .mdiv2 {
-    width: 50%;
-    height: 50%;
+[for = txt1] {
+    color: red;
 }
 
-.mdiv1 {
-    background-color: yellow;
+[for = txt2] {
+color:slateblue;
 }
-
-.mdiv1 > select {
-    width: 150px;
-    height: 50px;
-    margin: 10px;
-} */
