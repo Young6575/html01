@@ -1,0 +1,42 @@
+
+
+header {
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 3px;
+}
+.boxset {
+    display: flex;
+}
+
+.boxset > div {
+    width: 80px;
+    height: 80px;
+    border: 1px black solid;
+}
+
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    width: 120px;
+    height: 40px;
+}
+
+#msg {
+    width: 80%;
+    height: 40px;
+    border: 1px black solid;
+    text-align: center;
+
+}
+
+.bigbox2 {
+    border: 1px black solid;
+}
+
+
+.bigbox > img {
+    width: 240px;
+    height:240px;
+}
