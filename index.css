@@ -42,6 +42,7 @@ main li {
 footer ul {
     display: flex;
     justify-content: center;
+  
 }
 
 footer li {
