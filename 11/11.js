@@ -1,4 +1,5 @@
 
+
 const yesterday = () => {
 
     const yday = new Date();
@@ -12,13 +13,31 @@ const yesterday = () => {
    
 }
 
-const getMvList = (dt,ul) => {
 
-        const url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=d96fcc807188ee7c92cbe1d0636aef73&targetDt=" + dt;
+const getpost = (mvNm) => {
 
-        console.log(url);
+    const tbdbAPI = "b18e798ff377ef49f1c335283e7c43d6" ;
+    let url = `https://api.themoviedb.org/3/search/movie?api_key=${tbdbAPI}&query=${mvNm}` ;
+    const poster = document.querySelector(".poster");
 
-        fetch(url)
+
+  fetch(url)
+    .then(resp => resp.json())
+    .then(data => poster.innerHTML = `<img src="https://image.tmdb.org/t/p/w500${data.results[0].poster_path}" />`) 
+   // .then (data => console.log(data)) 
+    .catch(err => console.log(err)) ;
+
+  
+}
+
+
+
+const getMvList = (dt,ul,mt) => {
+
+
+        console.log(mt);
+
+        fetch(mt)
             .then(resp => resp.json())
             .then(data => {
                 const dailyBoxOfficeList = data.boxOfficeResult.dailyBoxOfficeList;
@@ -33,8 +52,8 @@ const getMvList = (dt,ul) => {
                     } else {
                         icon = `<i class="fa-solid fa-minus" style="color:gray"></i>`;
                     }
-
-                    return `<li>
+                    const mv = encodeURIComponent(item.movieNm);
+                    return `<li onClick=getpost("${mv}")>
                         <span class="spRank">${item.rank} </span> 
                         <span class="spMv">${item.movieNm}</span>
                         <span class="sprankInten">${icon} ${item.rankInten}</span> 
@@ -48,23 +67,44 @@ const getMvList = (dt,ul) => {
 
 }
 
-const mostList = (date,yearsearch) => {
-    const endDate = date;
 
-
-
-}
 
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    const ul = document.querySelector("main > ul") ;
+    const ul = document.querySelector("main  ul") ;
     const date = document.querySelector("#scandate") ;
+    const bt = document.querySelector("#bt1");
+    date.value = yesterday();
+    dt =date.value.replaceAll('-','');
+    const url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=d96fcc807188ee7c92cbe1d0636aef73&targetDt=" + dt;
     
-        date.value = yesterday();
-        getMvList(date.value.replaceAll('-',''), ul) ;
+        
+        getMvList(date.value.replaceAll('-',''), ul,url) ;
 
     date.addEventListener("change", () => {
-        getMvList(date.value.replaceAll('-',''), ul) ;
+        getMvList(date.value.replaceAll('-',''), ul,url) ;
     });
+
+bt.addEventListener("click", () => {
+    
+    const ul = document.querySelector("main  ul") ;
+    const date = document.querySelector("#scandate") ;
+    const selectedRadio = document.querySelector('input[name="multiMovieYn"]:checked');
+    dt =date.value.replaceAll('-','');
+
+
+    let url = "https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?key=d96fcc807188ee7c92cbe1d0636aef73&targetDt=" + dt + "&multiMovieYn=";
+        if (selectedRadio.value=="다양성 영화") url = url + "Y";
+        else if (selectedRadio.value=="상업 영화") url = url + "N";
+
+    console.log(selectedRadio.value);
+    console.log(url);        
+         
+    getMvList(date.value.replaceAll('-',''), ul,url)
+
+    })
+
 });
+
+

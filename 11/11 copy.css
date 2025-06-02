@@ -24,7 +24,6 @@ h2 {
 
 .poster_info {
     border: 1px solid black;
-    width: 150px;
 }
 
 .date {
@@ -38,37 +37,6 @@ h2 {
     align-items: center;
 }
 
-
-.post{
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: start;
-    border: 1px solid aquamarine;
-}
-
-.post > div {
-    width: 150px; 
-}
-
-.poster {
-    margin-top: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 150px;
-    height: 200px;
-    border: 1px solid black;   
-}
-
-.poster > img {
-    width: 100%;
-    height: 100%;
-
-}
-
-
-
 .mval > li {
     border: dotted 1px black;
 }
@@ -78,7 +46,7 @@ h2 {
 .mval  {
     width: 80%;
     list-style: none;
-
+    
 }
 
 .spMv {
@@ -104,4 +72,28 @@ h2 {
 .mval > li:hover {
     color: brown;
     cursor: pointer;
+}
+
+.post{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    border: 1px solid aquamarine;
+}
+
+.poster {
+    margin-top: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 150px;
+    height: 200px;
+    border: 1px solid black;   
+}
+
+.poster > img {
+    width: 100%;
+    height: 100%;
+
 }
