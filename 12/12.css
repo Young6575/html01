@@ -1,0 +1,74 @@
+.pMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+h2 {
+    text-align: center;
+    justify-content: start;
+}
+
+.cMain {
+    justify-content: start;
+}
+
+[name=ok], [name=reset]  {
+    background-color: blue;
+    color: white;
+    padding: 5px 30px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+[name=search] {
+    padding: 5px;
+    border-radius: 3px;
+}
+
+.photo a {
+  display: block; /* 또는 inline-block */
+  height: 100%;
+}
+
+
+.photo {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 250px;
+    margin: 1%;
+}
+
+
+
+.photo  img {
+    border-radius: 15px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.photo >span {
+    display: inline-flexbox;
+
+}
+
+.cbox {
+    width: 80%;
+    display: flex;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    height: 55vh;
+    
+}
+
+span {
+    text-align: left;
+    margin-left: 30px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
+}
