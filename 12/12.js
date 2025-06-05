@@ -1,6 +1,6 @@
 const getpost = (searchName) => {
 
-    const url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?serviceKey=kASgudSVIDhI8SvrRuVA2EZyHH8kpgeygVvyj%2FcIPbzNvlWF%2BEJ%2ByAXv6X2uq9vB8YNRPVsq8LFYFOdjVteeaw%3D%3D&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&keyword=${searchName}&_type=json`
+    const url = `https://apis.data.go.kr/B551011/PhotoGalleryService1/gallerySearchList1?serviceKey=&numOfRows=10&pageNo=1&MobileOS=ETC&MobileApp=AppTest&arrange=A&keyword=${searchName}&_type=json`
     const form = document.querySelector(".cbox");
 
         form.innerHTML=`<div style="display: flex; flex-direction: column; align-items: center;">
