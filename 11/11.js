@@ -16,7 +16,7 @@ const yesterday = () => {
 
 const getpost = (mvNm) => {
 
-    const tbdbAPI = "b18e798ff377ef49f1c335283e7c43d6" ;
+    const tbdbAPI = "" ;
     let url = `https://api.themoviedb.org/3/search/movie?api_key=${tbdbAPI}&query=${mvNm}` ;
     const poster = document.querySelector(".poster");
 
