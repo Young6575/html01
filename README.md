@@ -1,8 +1,3 @@
 # K - Digital 2기
-## HTML
-1. 기초
----
-## css
-2. 기초
----
-## js
+1. HTML/CSS/JS 실습
+https://html01-one.vercel.app/
